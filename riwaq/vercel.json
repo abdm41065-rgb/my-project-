@@ -1,7 +1,0 @@
-{
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/", "destination": "/Riwaq%20Landing.dc.html" },
-    { "source": "/app", "destination": "/Riwaq%20Landing.dc.html" }
-  ]
-}
