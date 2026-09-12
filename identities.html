@@ -1904,7 +1904,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
     if (index < 1) return;
     const img = document.createElement('img');
     img.className = 'identity-photo';
-    img.src = `images/work-${String(index).padStart(2,'0')}.jpg`;
+    img.src = `work-${String(index).padStart(2,'0')}.jpg`;
     img.alt = '';
     img.loading = index > 3 ? 'lazy' : 'eager';
     img.addEventListener('error', () => img.remove(), {once:true});
@@ -1976,7 +1976,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 
     document.querySelectorAll('.plate[data-open]').forEach((plate, index) => {
       const group = colorNav.children[index];
-      extractPalette(`images/work-${String(index + 1).padStart(2,'0')}.jpg`, colors => {
+      extractPalette(`work-${String(index + 1).padStart(2,'0')}.jpg`, colors => {
         const source = document.querySelector(`#src-${plate.dataset.open} .sh-pal`);
         const sourceChips = source ? [...source.querySelectorAll('.chipcol')] : [];
         const navChips = group ? [...group.querySelectorAll('.color-chip')] : [];
@@ -2043,7 +2043,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
     clone.removeAttribute('id');
     clone.classList.remove('sheet-src');
     const bgIndex = {noor:1, shifa:2, pharmaline:3, rafidain:4, medico:5, dawa:6, ammar:7, zainab:8, eman:9, mustafa:10}[id];
-    if (bgIndex) clone.style.setProperty('--identity-bg', `url("images/work-${String(bgIndex).padStart(2,'0')}.jpg")`);
+    if (bgIndex) clone.style.setProperty('--identity-bg', `url("work-${String(bgIndex).padStart(2,'0')}.jpg")`);
     const h3 = clone.querySelector('h3');
     if (h3) h3.id = 'sheetLabel';
     body.replaceChildren(clone);
